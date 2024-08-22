@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="cera.ico" type="image/x-icon">
+    <title>Patricia Lima Depilação</title>
+    <style>
+        @font-face {
+            font-family: fonte1;
+            src: url(fonte/josephsophia.otf) format(opentype), url(fonte/josephsophia.ttf) format(truetype);
+        }
+
+        @font-face {
+            font-family: fonte2;
+            src: url(fonte/GlacialIndifference-Regular.otf) format(opentype);
+        }
+
+        @font-face {
+            font-family: fonte3;
+            src: url(fonte/Handlee-Regular.ttf) format(truetype);
+        }
+
+        * {
+            margin: 0px;
+        }
+        body {
+            position: relative;
+            background-image: url(imagens/fundo.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .titulo1{
+            text-align: center;
+            font-family: fonte1;
+            font-size: 6em;
+            color: #5B4F49;
+            margin-top: 40px;
+            margin-left: -60px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.205);
+        }
+
+        .titulo2 {
+            text-align: center;
+            font-family: fonte1;
+            font-size: 6em;
+            color: #5B4F49;
+            margin-top: -25px;
+            margin-left: 140px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.205);
+        }
+
+        #sub-titulo {
+            text-align: center;
+            font-family: fonte2;
+            font-size: 2em;
+            color: #5B4F49;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.205);
+        }
+
+        #container1 {
+            margin: auto;
+            width: 270px; 
+        }
+
+        .links {
+            position: relative;
+            display: block;
+            margin-bottom: 18px;
+            padding: 5px;
+            text-decoration: none;
+            text-align: center;
+            font-family: fonte3;
+            font-size: 1.7em;
+            color: #f7f7f7;
+            background-color: #bda292c4;
+            border-radius: 15px 0px 15px 0px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.233);
+            text-shadow: 0px 0px 2px rgba(83, 83, 83, 0.151);
+            outline: 2px solid transparent;
+            outline-offset: 0;
+            transition: outline-offset 0.3s ease, outline-color 0.3s ease;
+            animation: slideLeft 1.2s ease-out;
+            z-index: 2;
+        }
+
+        @keyframes slideLeft {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .links:hover:focus {
+            background-color: #E0CCC0;
+            color:white;
+            outline: 0.5px solid white;
+            text-decoration: underline;
+            outline-offset: 1px;
+        }
+
+        #svg {
+            position: absolute;
+            width: 270px;
+            top: -20px;
+            left: 10px;
+        }
+
+        #container2 {
+            position: relative;
+            background-color: transparent;
+            margin: auto;
+            margin-top: -280px;
+            width: 300px;
+            height: 250px;
+        }
+
+        .map-container {
+            position: relative;
+            /*top: 0px;*/
+            display: none;
+            width: 330px;
+            height: 370px;
+            background-color: white;
+            z-index: 3;
+            border-radius: 25px 0px 25px 0px;
+            margin: -470px auto;
+        }
+
+        #botao-maps {
+            display: inline-block;
+            padding-top: 12px;
+            width: 300px;
+            height: 33px;
+            transform: translate(15px, 310px);
+            border-radius: 0px 0px 25px 0px;
+            background-color: #5B4F49;
+            text-decoration: none;
+            font-family: fonte2;
+            font-size: 1.1em;
+            color: rgb(240, 240, 240);
+            text-align: center;
+        }
+
+        #botao-maps:hover:focus {
+            background-color: #5B4F49;
+            background-color: #E0CCC0;
+            color:white;
+            outline: 0.5px solid white;
+            text-decoration: underline;
+            outline-offset: 1px;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            margin: auto;
+            padding-bottom: 40px;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            transform: translate(-50%, -50%);
+            border-radius: 25px 0px 25px 0px;
+            border: 0px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.274);
+            pointer-events: none;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="titulo1">Patrícia</p>
+        <p class="titulo2">Lima</p>
+    </div>
+    <div>
+        <p id="sub-titulo">Depilação feminina</p>
+    </div>
+    <div id="container1">
+        <a href="https://api.whatsapp.com/send?phone=5548999267775" target="_blank" class="links">WhatsApp</a>
+        <a href="https://online.maapp.com.br/DepilPatriciaLima" target="_blank" class="links">Agenda</a>
+        <a href="#" target="_blank" class="links" id="maps">Nossa localização</a>
+        <a href="https://www.google.com/search?q=Patr%C3%ADcia+Lima+Depila%C3%A7%C3%A3o+Feminina&client=opera-gx&hs=lLb&sca_esv=7085e96b5b715798&sxsrf=ADLYWIK2lF4F_vF8EL-nOnBQF9EufNymNw%3A1724349705497&ei=CX3HZpf6Hb3N1sQPiceg-QI&ved=0ahUKEwjXoqidl4mIAxW9ppUCHYkjKC8Q4dUDCA8&uact=5&oq=Patr%C3%ADcia+Lima+Depila%C3%A7%C3%A3o+Feminina&gs_lp=Egxnd3Mtd2l6LXNlcnAiI1BhdHLDrWNpYSBMaW1hIERlcGlsYcOnw6NvIEZlbWluaW5hMgIQJjIIEAAYgAQYogRIgwpQqAJYqAJwAXgAkAEAmAGUAaABlAGqAQMwLjG4AQPIAQD4AQL4AQGYAgKgApsBwgIHEAAYsAMYHsICCxAAGLADGAgYHhgPwgILEAAYgAQYsAMYogSYAwCIBgGQBgSSBwMxLjGgB58C&sclient=gws-wiz-serp#lrd=0x952735942f6c43b7:0xad58e064d8441273,1,,,," target="_blank" class="links"> Nos avalie no Google</a>
+    </div>
+    <div id="container2">
+        <img src="boneca.svg" alt="boneca logo" id="svg">
+    </div>
+        <div class="map-container" id="mapContainer">
+            <a href="https://www.google.com/maps?ll=-27.628823,-48.663538&z=14&t=m&hl=pt-BR&gl=BR&mapclient=embed&cid=12490980290241761907" target="_blank" id="botao-maps">Conheça nossa localização!</a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14139.443782935445!2d-48.663538!3d-27.628823!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952735942f6c43b7%3A0xad58e064d8441273!2sPatr%C3%ADcia%20Lima%20Depila%C3%A7%C3%A3o%20Feminina%20%7C%20Depila%C3%A7%C3%A3o%20com%20Cera%20%7C%20Depiladora%20em%20Palho%C3%A7a!5e0!3m2!1spt-BR!2sbr!4v1724346761490!5m2!1spt-BR!2sbr"></iframe>  
+        </div>
+    <script>
+        // Mostra ou esconde o mapa quando o botão é clicado
+        document.getElementById('maps').addEventListener('click', function(event) {
+            event.preventDefault(); // Previne a ação padrão do link
+            var mapContainer = document.getElementById('mapContainer');
+            if (mapContainer.style.display === 'none' || mapContainer.style.display === '') {
+                mapContainer.style.display = 'block'; // Mostra o mapa
+            } else {
+                mapContainer.style.display = 'none'; // Esconde o mapa
+            }
+        });
+
+        // Fecha o mapa ao clicar fora dele
+        document.addEventListener('click', function(event) {
+            var mapContainer = document.getElementById('mapContainer');
+            var mapsButton = document.getElementById('maps');
+
+            if (mapContainer.style.display === 'block' && 
+                !mapContainer.contains(event.target) && 
+                event.target !== mapsButton) {
+                mapContainer.style.display = 'none'; // Esconde o mapa
+            }
+        });
+    </script>
+</body>
+</html>
